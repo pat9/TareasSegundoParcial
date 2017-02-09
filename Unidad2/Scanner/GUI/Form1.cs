@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Management.Instrumentation;
 using System.Windows.Forms;
-using System.Net.NetworkInformation;
 
 namespace Scanner
 {
@@ -16,7 +16,6 @@ namespace Scanner
         public Form1()
         {
             InitializeComponent();
-            NetworkInformationAccess.Read.ToString();
-        }
+            }
     }
 }

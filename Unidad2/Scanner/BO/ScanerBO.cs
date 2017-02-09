@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
 using System.Net.NetworkInformation;
+using System.Net.Sockets;
+
 
 namespace Scanner.BO
 {
     class ScanerBO
     {
-        private string ip;
+        private IPAddress ip;
         private string red;
         private string subMask;
 
-        public string Ip
+        public IPAddress Ip
         {
             get
             {
                 return ip;
-            }
-
-            set
-            {
-                ip = value;
             }
         }
 
@@ -54,9 +52,31 @@ namespace Scanner.BO
 
         public void ObtenerIP()
         {
-            NetworkInformationAccess.Read.ToString();
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ipAddress in host.AddressList)
+            {
+                if (ipAddress.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    ip = ipAddress;
+                }
+            }
         }
 
-
-    }
+        public void ObtenerSubMask()
+        {
+            foreach (NetworkInterface adapter in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                foreach (UnicastIPAddressInformation unicastIPAddressInformation in adapter.GetIPProperties().UnicastAddresses)
+                {
+                    if (unicastIPAddressInformation.Address.AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        if (ip.Equals(unicastIPAddressInformation.Address))
+                        {
+                           subMask =  unicastIPAddressInformation.IPv4Mask.ToString();
+                        }
+                    }
+                }
+            }
+        }
+   }
 }
