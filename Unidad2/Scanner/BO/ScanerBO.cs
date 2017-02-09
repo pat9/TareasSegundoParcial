@@ -72,11 +72,13 @@ namespace Scanner.BO
                     {
                         if (ip.Equals(unicastIPAddressInformation.Address))
                         {
+                           red = adapter.Name;
                            subMask =  unicastIPAddressInformation.IPv4Mask.ToString();
                         }
                     }
                 }
             }
         }
+
    }
 }
