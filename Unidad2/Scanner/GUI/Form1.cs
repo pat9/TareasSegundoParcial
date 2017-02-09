@@ -14,13 +14,14 @@ using System.Diagnostics;
 
 namespace Scanner
 {
-    public partial class Form1 : Form
+    public partial class frm_Escan : Form
     {
         ScanerBO scan = new ScanerBO();
-        public Form1()
+        public frm_Escan()
         {
             InitializeComponent();
-            }
+            btn_Bloc.Enabled = false;
+        }
 
         private void btn_Escanear_Click(object sender, EventArgs e)
         {
@@ -30,14 +31,16 @@ namespace Scanner
             txt_IP.Text = scan.Ip.ToString();
             txt_Red.Text = scan.Red;
             txt_Mask.Text = scan.SubMask;
-     
+
+            btn_Bloc.Enabled = true;
 
         }
 
         private void btn_Bloc_Click(object sender, EventArgs e)
         {
             StreamWriter archivo = File.CreateText("C:\\Dany\\Red.txt");
-            String contenido = "\nLa ip es: " + scan.Ip;
+            string contenido;
+            contenido = "La ip es: " + scan.Ip;
             archivo.WriteLine(contenido.ToString());
             contenido = "La subMask es: " + scan.SubMask;
             archivo.WriteLine(contenido.ToString());

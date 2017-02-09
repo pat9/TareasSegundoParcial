@@ -1,6 +1,6 @@
 ﻿namespace Scanner
 {
-    partial class Form1
+    partial class frm_Escan
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Escan));
             this.btn_Escanear = new System.Windows.Forms.Button();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.lbl_IP = new System.Windows.Forms.Label();
@@ -41,20 +42,24 @@
             // 
             // btn_Escanear
             // 
-            this.btn_Escanear.Location = new System.Drawing.Point(132, 51);
+            this.btn_Escanear.Image = ((System.Drawing.Image)(resources.GetObject("btn_Escanear.Image")));
+            this.btn_Escanear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Escanear.Location = new System.Drawing.Point(109, 38);
             this.btn_Escanear.Name = "btn_Escanear";
-            this.btn_Escanear.Size = new System.Drawing.Size(75, 23);
+            this.btn_Escanear.Size = new System.Drawing.Size(98, 40);
             this.btn_Escanear.TabIndex = 0;
             this.btn_Escanear.Text = "Escanear";
+            this.btn_Escanear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Escanear.UseVisualStyleBackColor = true;
             this.btn_Escanear.Click += new System.EventHandler(this.btn_Escanear_Click);
             // 
             // lbl_Titulo
             // 
             this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Location = new System.Drawing.Point(106, 22);
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(75, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(131, 13);
+            this.lbl_Titulo.Size = new System.Drawing.Size(180, 18);
             this.lbl_Titulo.TabIndex = 1;
             this.lbl_Titulo.Text = "Sistema de escaneo V 1.0";
             // 
@@ -108,19 +113,19 @@
             // 
             // btn_Bloc
             // 
-            this.btn_Bloc.Location = new System.Drawing.Point(132, 190);
+            this.btn_Bloc.Image = ((System.Drawing.Image)(resources.GetObject("btn_Bloc.Image")));
+            this.btn_Bloc.Location = new System.Drawing.Point(130, 165);
             this.btn_Bloc.Name = "btn_Bloc";
-            this.btn_Bloc.Size = new System.Drawing.Size(75, 23);
+            this.btn_Bloc.Size = new System.Drawing.Size(63, 53);
             this.btn_Bloc.TabIndex = 8;
-            this.btn_Bloc.Text = "Pasar al bloc de notas";
             this.btn_Bloc.UseVisualStyleBackColor = true;
             this.btn_Bloc.Click += new System.EventHandler(this.btn_Bloc_Click);
             // 
-            // Form1
+            // frm_Escan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 296);
+            this.ClientSize = new System.Drawing.Size(321, 230);
             this.Controls.Add(this.btn_Bloc);
             this.Controls.Add(this.txt_Mask);
             this.Controls.Add(this.txt_Red);
@@ -130,8 +135,8 @@
             this.Controls.Add(this.lbl_IP);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.btn_Escanear);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frm_Escan";
+            this.Text = "Escaner";
             this.ResumeLayout(false);
             this.PerformLayout();
 
