@@ -17,7 +17,7 @@ namespace EstructuraSelectiva
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_FruteriaGUI());
+            Application.Run(new frm_FactorialGUI());
         }
     }
 }

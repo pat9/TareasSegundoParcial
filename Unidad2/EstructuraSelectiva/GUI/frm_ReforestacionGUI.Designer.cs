@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ReforestacionGUI));
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.lbl_Hectarias = new System.Windows.Forms.Label();
             this.lbl_PorPino = new System.Windows.Forms.Label();
@@ -236,13 +237,16 @@
             // 
             // btn_Regresar
             // 
+            this.btn_Regresar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Regresar.FlatAppearance.BorderSize = 0;
+            this.btn_Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Regresar.Location = new System.Drawing.Point(452, 29);
+            this.btn_Regresar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Regresar.Image")));
+            this.btn_Regresar.Location = new System.Drawing.Point(454, 36);
             this.btn_Regresar.Name = "btn_Regresar";
-            this.btn_Regresar.Size = new System.Drawing.Size(89, 36);
+            this.btn_Regresar.Size = new System.Drawing.Size(73, 75);
             this.btn_Regresar.TabIndex = 10;
-            this.btn_Regresar.Text = "Regresar";
-            this.btn_Regresar.UseVisualStyleBackColor = true;
+            this.btn_Regresar.UseVisualStyleBackColor = false;
             this.btn_Regresar.Click += new System.EventHandler(this.btn_Regresar_Click);
             // 
             // frm_ReforestacionGUI

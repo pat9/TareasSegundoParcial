@@ -46,8 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\FactorialBO.cs" />
     <Compile Include="BO\FruteriaBO.cs" />
+    <Compile Include="BO\NumeroMedioBO.cs" />
     <Compile Include="BO\ReforestacionBO.cs" />
+    <Compile Include="BO\SumaBO.cs" />
+    <Compile Include="GUI\frm_FactorialGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_FactorialGUI.Designer.cs">
+      <DependentUpon>frm_FactorialGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_FruteriaGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,22 +69,43 @@
     <Compile Include="GUI\frm_MenuGUI.Designer.cs">
       <DependentUpon>frm_MenuGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_NumeroMedioGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_NumeroMedioGUI.Designer.cs">
+      <DependentUpon>frm_NumeroMedioGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_ReforestacionGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frm_ReforestacionGUI.Designer.cs">
       <DependentUpon>frm_ReforestacionGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_SumaGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_SumaGUI.Designer.cs">
+      <DependentUpon>frm_SumaGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frm_FactorialGUI.resx">
+      <DependentUpon>frm_FactorialGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_FruteriaGUI.resx">
       <DependentUpon>frm_FruteriaGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_MenuGUI.resx">
       <DependentUpon>frm_MenuGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_NumeroMedioGUI.resx">
+      <DependentUpon>frm_NumeroMedioGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_ReforestacionGUI.resx">
       <DependentUpon>frm_ReforestacionGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_SumaGUI.resx">
+      <DependentUpon>frm_SumaGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
