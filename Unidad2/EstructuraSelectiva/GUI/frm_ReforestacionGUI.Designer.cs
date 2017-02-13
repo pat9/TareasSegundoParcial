@@ -226,7 +226,11 @@
             // btn_Calcular
             // 
             this.btn_Calcular.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Calcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Calcular.FlatAppearance.BorderSize = 0;
+            this.btn_Calcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Calcular.ForeColor = System.Drawing.Color.Black;
             this.btn_Calcular.Location = new System.Drawing.Point(442, 329);
             this.btn_Calcular.Name = "btn_Calcular";
             this.btn_Calcular.Size = new System.Drawing.Size(85, 38);
@@ -238,7 +242,9 @@
             // btn_Regresar
             // 
             this.btn_Regresar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Regresar.FlatAppearance.BorderSize = 0;
+            this.btn_Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Regresar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Regresar.Image")));

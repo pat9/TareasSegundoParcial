@@ -18,7 +18,7 @@ namespace EstructuraSelectiva.BO
                 return num;
             }
 
-            set
+            set 
             {
                 num = value;
             }
